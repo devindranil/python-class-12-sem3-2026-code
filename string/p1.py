@@ -91,16 +91,100 @@ for i in range(len(word)):
 
 #print("ROhit shArma".title()) # first letter of every word convert into upper case , if any chracter is upper case except the first charcter of the words then it's convert into lowercase
 
-print("indrANil".upper()) #convert each charcater into upper case
-print("CHAKRabORTY".lower()) #convert each charcater into lower case
+'''print("indrANil".upper()) #convert each charcater into upper case
+print("CHAKRabORTY".lower()) #convert each charcater into lower case'''
 
 # Next class = Searching and checking methods
+text = "I Love Python Programming. Python is Fun"
+
+# 1.count() - return no of times a char or a word is repeat in the particular string
+# print(text.count("P"))
+
+# 2.find() - return the position index of any charcater in the string
+'''print(text.find("Python")) # output 7
+print(text.find("Love")) # output 2
+print(text.find("P")) # output 7
+print(text.find("Java")) # Missing or not present in string memory, then find return -1
+print(text.find("x"))'''
+
+# 3.index() = similar to find() only difference is index return error when a character or word does't present in string memory
+# print(text.index("Python")) # output 7
+# print(text.index("Java")) # valueError: substring not found
+
+# 4. startswith() and endswith() = return True or False
+'''msg = "assignment.docx"
+print(msg.startswith("A"))
+print(msg.endswith("pdf"))'''
 
 
-# Type checking methods
+# Type checking methods - return True or False
+'''print("Python3".isalnum()) # True (Alphabets + Numbers both are present)
+print("India".isalnum()) # True (If only alphabets then also return True)
+print("12345".isalnum()) # True (If only numbers then also return True)
+print("@@@@&&&".isalnum()) # False (If only special charcater then return False)
+print("India@@@@&&&123".isalnum()) # False (If any one charcater is speical symbols then it's always return False)'''
 
+'''print("Python".isalpha()) # True (If only alphabets are present and no numbers and no spaces are present)
+print("Python3".isalpha())
+print("I Love You".isalpha())'''
+
+'''print("12345".isdigit()) # True (If all chracter is digit)
+print("1 2345".isdigit()) # False (If any spaces include)
+print("123Python".isdigit()) # False (If any alpahbet include)'''
+
+'''print("python".islower()) # True (If all charcater is lowercase)
+print("Python".islower())  # False (If any one charcater is uppercase)
+print("i love india".islower()) # True (it's does't matter a white space present or not)'''
+
+# print("PYTHON".isupper()) # True (If all chracter is uppercase)
+# print("PYTHON iS".isupper())
+
+'''print("   ".isspace()) # True (If only white spaces are present)
+print("I Love Programming".isspace()) # False (because not all ch is white space)'''
 
 # String stripping and modifying methods
+'''msg = "    hello    "
+print(msg)
+# Left strip -> "hello    "
+print(msg.lstrip())
+# Right strip -> "    hello"
+print(msg.rstrip())
+# Both side -> "hello"
+print(msg.strip())'''
 
+# replace() in python
+'''msg = "I Like Java"
+print(msg)
+x=msg.replace("Java","Python")
+y=msg.replace("Like","Love")
+print(x)
+print(y)
+print(id(msg))
+print(id(x))
+print(id(y))'''
+
+# vvi = replace create a new string
 
 # string splitting, joining and partitioning
+
+# all this method create a new memory
+
+# 1.split() - convert any string items into list
+'''data = "Rahul,amit,subham"
+student_list = data.split(",")
+print(data)
+print(student_list)
+print(len(student_list))'''
+
+# 2. join() - convert any list items into a string
+'''names = ["Sayak", "Eshita", "Bidisha"]
+res = ", ".join(names)
+print(res)'''
+
+# 3. partition()
+email = "support@gmail.com"
+msg=email.partition(".")
+print(email) 
+print(msg)
+
+# imp = return tupple and partition into three part (before, exact, after), new memory crete
